@@ -1,8 +1,11 @@
-package biblioteca;
+package com.mycompany.app;
 import java.util.ArrayList;
 
 public class Autor extends Pessoa{
 	private String nacionalidade;
+
+	public Autor() {
+	}
 	
 	public Autor(String nome, String nacionalidade, ArrayList<Livro> obrasPublicadas) {
 		super(nome, obrasPublicadas);

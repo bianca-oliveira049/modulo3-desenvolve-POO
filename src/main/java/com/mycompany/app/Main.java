@@ -1,4 +1,4 @@
-package biblioteca;
+package com.mycompany.app;
 import java.util.ArrayList;
 
 public class Main {
@@ -11,7 +11,7 @@ public class Main {
 		users.add(user1);
 		users.add(user2);
 		Autor autor1 = new Autor("Jessica Felix", "Brasileira", obras);
-		Livro livro1 = new Livro("Java for Begginers", autor1, "Tecnologia");
+		Livro livro1 = new Livro("Java for Begginers", autor1, "Tecnologia", true);
 		autor1.addObra(livro1);
 		user1.empresta(livro1, users);
 		user2.empresta(livro1, users);

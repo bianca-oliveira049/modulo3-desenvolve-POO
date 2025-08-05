@@ -1,4 +1,4 @@
-package biblioteca;
+package com.mycompany.app;
 import java.util.Date;
 
 public class Emprestimo {
@@ -6,6 +6,9 @@ public class Emprestimo {
 	private Date dataDevolucao;
 	private Livro livro;
 	private Usuario usuario;
+
+	public Emprestimo() {
+	}
 	
 	public Emprestimo(Date dataRetirada, Date dataDevolucao, Livro livro, Usuario usuario) {
 		this.dataRetirada = dataRetirada;
@@ -19,6 +22,12 @@ public class Emprestimo {
 	}
 	public void setDataDevolucao(Date novaDataDevolucao) {
 		this.dataDevolucao = novaDataDevolucao;
+	}
+	public void setLivro(Livro livro) {
+		this.livro = livro;
+	}
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 	
 	public Date getDataRetirada() {

@@ -1,4 +1,5 @@
-package biblioteca;
+package com.mycompany.app;
+
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Calendar;
@@ -44,7 +45,7 @@ public class Usuario extends Pessoa{
 			Emprestimo novoEmp = new Emprestimo(dataAtual, dataDev, livro, this);
 			this.historicoEmprestimo.add(novoEmp);
 			
-			livro.setDisponivel();
+			livro.setDisponivel(false);
 			
 			return true;
 		}
@@ -63,5 +64,15 @@ public class Usuario extends Pessoa{
 		return false;
 	}
 	
+	public void devolve(Livro livro) {
+		Date dataAtual = new Date();
+		for (int i = this.historicoEmprestimo.size() - 1; i >= 0; i--) {
+			if (this.historicoEmprestimo.get(i).getLivro().equals(livro)) {
+				this.historicoEmprestimo.get(i).setDataDevolucao(dataAtual);
+				livro.setDisponivel(true);
+				break;
+			}
+		}
+	}
 	
 }
