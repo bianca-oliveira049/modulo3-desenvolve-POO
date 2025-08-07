@@ -2,8 +2,10 @@ package com.mycompany.app;
 
 import org.junit.Test;
 
-import com.mycompany.app.Autor;
-import com.mycompany.app.Livro;
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Livro;
+
+import static org.junit.Assert.*;
 
 public class LivroTest {
 
@@ -17,7 +19,7 @@ public class LivroTest {
         livro1.setTitulo("Java Basico");
 
         //Verifica se o titulo atribuído é igual ao retorno de getTitulo()
-        assertEquals("Java Basico", livro.getTitulo());
+        assertEquals("Java Basico", livro1.getTitulo());
     }
 
     //setAutor
@@ -71,7 +73,7 @@ public class LivroTest {
         Livro livro1 = new Livro("Java Basico", autor, "tecnologia", true);
 
         //Verifica se o titulo atribuído é igual ao retorno de getTitulo()
-        assertEquals("Java Basico", livro.getTitulo());
+        assertEquals("Java Basico", livro1.getTitulo());
     }
 
     //getAutor
@@ -105,6 +107,6 @@ public class LivroTest {
         Livro livro2 = new Livro("Java Avançado", autor, "tecnologia", false);
 
         assertEquals(true, livro1.isDisponivel());
-        asserEquals(false, livro2.isDisponivel());
+        assertEquals(false, livro2.isDisponivel());
     }
 }

@@ -1,4 +1,4 @@
-package com.mycompany.app;
+package com.mycompany.app.Model;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,6 +8,10 @@ import java.util.GregorianCalendar;
 public class Usuario extends Pessoa{
 	private int idade;
 	private ArrayList<Emprestimo> historicoEmprestimo;
+	
+	public Usuario() {
+
+	}
 	
 	public Usuario(String nome, int idade) {
 		super(nome);

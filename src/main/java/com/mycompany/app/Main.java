@@ -1,4 +1,6 @@
 package com.mycompany.app;
+
+import com.mycompany.app.Model.*;
 import java.util.ArrayList;
 
 public class Main {

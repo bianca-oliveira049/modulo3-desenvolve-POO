@@ -1,10 +1,10 @@
-package test.java.com.mycompany.app;
+package com.mycompany.app;
 
 import org.junit.Test;
 import java.util.ArrayList;
-import com.mycompany.app.Autor;
-import com.mycompany.app.Livro;
-import com.mycompany.app.Usuario;
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.Usuario;
 
 import static org.junit.Assert.*;
 

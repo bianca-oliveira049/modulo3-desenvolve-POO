@@ -1,10 +1,13 @@
-package com.mycompany.app;
+package com.mycompany.app.Model;
 
 import java.util.ArrayList;
 
 public class Pessoa {
 	protected String nome;
 	protected ArrayList<Livro> livros;
+
+	public Pessoa() {
+	}
 	
 	public Pessoa(String nome) {
 		this.nome = nome;

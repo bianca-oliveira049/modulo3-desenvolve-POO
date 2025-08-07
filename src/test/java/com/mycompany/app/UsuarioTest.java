@@ -7,10 +7,10 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.Calendar;
 
-import com.mycompany.app.Autor;
-import com.mycompany.app.Livro;
-import com.mycompany.app.Usuario;
-import com.mycompany.app.Emprestimo;
+import com.mycompany.app.Model.Autor;
+import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.Usuario;
+import com.mycompany.app.Model.Emprestimo;
 
 import static org.junit.Assert.*;
 
@@ -116,13 +116,13 @@ public class UsuarioTest {
         Livro livro2 = new Livro("Java Avançado", autor, "tecnologia", false);
 
         //Empresta o livro para o usuario e verifica se a função retorna true
-        assertTrue(usuario.empresta(livro, usuarios));
+        assertTrue(usuario.empresta(livro1, usuarios));
 
         //Verifica se o livro contido no emprestimo é o livro emprestado
         assertTrue(livro1.equals(usuario.getHistoricoEmprestimo().get(0).getLivro()));
 
         //Verifica se o livro agora está com o status de indisponivel
-        asserFalse(livro1.isDisponivel());
+        assertFalse(livro1.isDisponivel());
 
         //Verifica se a data de devolução é duas semanas após a data de retirada
         GregorianCalendar cal = new GregorianCalendar();
@@ -137,7 +137,7 @@ public class UsuarioTest {
         usuario.devolve(livro1);
 
         //Verifica se Empresta() retorna falso para o caso de tentativa de empréstimo de livro indisponível
-        assertFalse(usuario.empresta(livro2));
+        assertFalse(usuario.empresta(livro2, usuarios));
     }
 
     //Devolve

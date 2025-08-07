@@ -1,10 +1,16 @@
-package com.mycompany.app;
+package com.mycompany.app.Model;
 import java.util.ArrayList;
 
 public class Autor extends Pessoa{
 	private String nacionalidade;
 
 	public Autor() {
+		super();
+	}
+
+	public Autor(String nome, String nacionalidade) {
+		super(nome);
+		this.nacionalidade = nacionalidade;
 	}
 	
 	public Autor(String nome, String nacionalidade, ArrayList<Livro> obrasPublicadas) {
