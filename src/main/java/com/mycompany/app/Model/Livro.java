@@ -1,6 +1,8 @@
 package com.mycompany.app.Model;
 
-public class Livro {
+import com.mycompany.app.Interface.AutorInterface;
+
+public class Livro implements AutorInterface{
 	private String titulo;
 	private Autor autor;
 	private String genero;
@@ -52,5 +54,10 @@ public class Livro {
 		System.out.println("Livro: " + this.titulo);
 		System.out.println("Autor: " + this.autor.getNome());
 		System.out.println("Genero: " + this.genero);
+	}
+
+	@Override
+    public void publicar() {
+        System.out.println("Livro publicando...");
 	}
 }

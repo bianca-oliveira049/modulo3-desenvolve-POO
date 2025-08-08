@@ -21,13 +21,16 @@ public class Pessoa {
 	public String getNome() {
 		return this.nome;
 	}
-	public ArrayList<Livro> getLivros() {
-		return this.livros;
-	}
 	
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	public ArrayList<Livro> getLivros() {
+		return this.livros;
+	}
+	
+	
 	public void setLivros(ArrayList<Livro> livros) {
 		this.livros = livros;
 	}

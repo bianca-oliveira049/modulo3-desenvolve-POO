@@ -5,7 +5,9 @@ import java.util.Date;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-public class Usuario extends Pessoa{
+import com.mycompany.app.Interface.AutorInterface;
+
+public class Usuario extends Pessoa implements AutorInterface{
 	private int idade;
 	private ArrayList<Emprestimo> historicoEmprestimo;
 	
@@ -78,5 +80,9 @@ public class Usuario extends Pessoa{
 			}
 		}
 	}
-	
+
+	@Override
+    public void publicar() {
+        System.out.println("Usuário publicando...");
+	}
 }
