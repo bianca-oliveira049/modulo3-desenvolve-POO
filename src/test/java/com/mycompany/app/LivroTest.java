@@ -1,9 +1,10 @@
-package com.mycompany.app;
+package com.mycompany.app.Model;
 
 import org.junit.Test;
 
 import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Livro;
+import com.mycompany.app.Model.*;
 
 import static org.junit.Assert.*;
 

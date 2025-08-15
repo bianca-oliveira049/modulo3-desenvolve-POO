@@ -73,7 +73,39 @@ public class AutorTest {
         autor.addObra(livro2);
 
         //Verifica se o retorno de getObrasPublicadasGenero() é igual ao array livros
-        assertArrayEquals(livros, autor.getObrasPublicadasGenero("tecnologia"));
+        assertEquals(livros, autor.getObrasPublicadasGenero("tecnologia"));
         
+    }
+
+    //getIsUsuario
+    @Test 
+    public void testGetIsUsuario() {
+        //Cria instancias de Autor
+        Autor autor1 = new Autor();
+        Autor autor2 = new Autor();
+
+        //Atribui valores para o campo de IsUsuario para cada autor
+        autor1.setIsUsuario(false);
+        autor2.setIsUsuario(true);
+
+        //Verifica se o valor atribuído corresponde ao retorno de getIsUsuario()
+        assertFalse(autor1.getIsUsuario());
+        assertTrue(autor2.getIsUsuario());
+    }
+
+    //setIsUsuario
+    @Test 
+    public void testSetIsUsuario() {
+        //Cria instancias de Autor
+        Autor autor1 = new Autor();
+        Autor autor2 = new Autor();
+
+        //Atribui valores para o campo de IsUsuario para cada autor
+        autor1.setIsUsuario(false);
+        autor2.setIsUsuario(true);
+
+        //Verifica se o valor atribuído corresponde ao retorno de getIsUsuario()
+        assertFalse(autor1.getIsUsuario());
+        assertTrue(autor2.getIsUsuario());
     }
 }

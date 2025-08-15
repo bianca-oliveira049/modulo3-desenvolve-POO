@@ -4,6 +4,13 @@
             "type": "java",
             "name": "Main",
             "request": "launch",
+            "mainClass": "com.mycompany.app.Main",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
             "mainClass": "biblioteca.Main",
             "projectName": ""
         },

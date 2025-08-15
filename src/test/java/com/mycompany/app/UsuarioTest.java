@@ -56,7 +56,7 @@ public class UsuarioTest {
         usuario.sethistoricoEmprestimo(historico);
 
         //Verifica se o array atribuido é igual ao retorno de getHistoricoEmprestimo()
-        assertArrayEquals(historico, usuario.getHistoricoEmprestimo());
+        assertEquals(historico, usuario.getHistoricoEmprestimo());
     }
 
     @Test

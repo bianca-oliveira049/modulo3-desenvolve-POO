@@ -2,9 +2,7 @@ package com.mycompany.app.Model;
 
 import com.mycompany.app.Interface.AutorInterface;
 
-public class Livro implements AutorInterface{
-	private String titulo;
-	private Autor autor;
+public class Livro extends Publicacao{
 	private String genero;
 	private boolean disponivel;
 	
@@ -12,18 +10,11 @@ public class Livro implements AutorInterface{
 	}
 	
 	public Livro(String titulo, Autor autor, String genero, boolean disponivel) {
-		this.titulo = titulo;
-		this.autor = autor;
+		super(titulo, autor);
 		this.genero = genero;
 		this.disponivel = disponivel;
 	}
 	
-	public void setTitulo(String novoTitulo) {
-		this.titulo = novoTitulo;
-	}
-	public void setAutor(Autor novoAutor) {
-		this.autor = novoAutor;
-	}
 	public void setGenero(String novoGenero) {
 		this.genero = novoGenero;
 	}
@@ -31,12 +22,6 @@ public class Livro implements AutorInterface{
 		this.disponivel = disponivel;
 	}
 	
-	public String getTitulo() {
-		return this.titulo;
-	}
-	public Autor getAutor() {
-		return this.autor;
-	}
 	public String getGenero() {
 		return this.genero;
 	}
@@ -51,13 +36,8 @@ public class Livro implements AutorInterface{
 	}
 	
 	public void imprime() {
-		System.out.println("Livro: " + this.titulo);
-		System.out.println("Autor: " + this.autor.getNome());
+		System.out.println("Livro: " + this.getTitulo());
+		System.out.println("Autor: " + this.getAutor().getNome());
 		System.out.println("Genero: " + this.genero);
-	}
-
-	@Override
-    public void publicar() {
-        System.out.println("Livro publicando...");
 	}
 }

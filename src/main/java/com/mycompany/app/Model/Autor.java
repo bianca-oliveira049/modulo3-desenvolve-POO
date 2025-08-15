@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 public class Autor extends Pessoa{
 	private String nacionalidade;
+	private boolean isUsuario;
 
 	public Autor() {
 		super();
@@ -13,9 +14,10 @@ public class Autor extends Pessoa{
 		this.nacionalidade = nacionalidade;
 	}
 	
-	public Autor(String nome, String nacionalidade, ArrayList<Livro> obrasPublicadas) {
+	public Autor(String nome, String nacionalidade, ArrayList<Livro> obrasPublicadas, boolean isUsuario) {
 		super(nome, obrasPublicadas);
 		this.nacionalidade = nacionalidade;
+		this.isUsuario = isUsuario;
 	}
 	
 	public void setNacionalidade(String novaNacionalidade) {
@@ -24,6 +26,10 @@ public class Autor extends Pessoa{
 	
 	public void addObra(Livro livro) {
 		this.livros.add(livro);
+	}
+
+	public void setIsUsuario(boolean isUsuario) {
+		this.isUsuario = isUsuario;
 	}
 	
 	public String getNacionalidade() {
@@ -42,5 +48,8 @@ public class Autor extends Pessoa{
 		return livrosGenero;
 	}
 	
+	public boolean getIsUsuario() {
+		return this.isUsuario;
+	}
 	
 }
