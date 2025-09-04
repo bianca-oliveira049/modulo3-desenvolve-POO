@@ -2,7 +2,7 @@ package com.mycompany.app;
 
 import org.junit.Test;
 
-import biblioteca.Pessoa;
+import com.mycompany.app.Model.*;
 
 import static org.junit.Assert.*;
 

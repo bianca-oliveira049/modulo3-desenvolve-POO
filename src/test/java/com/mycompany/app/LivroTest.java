@@ -1,10 +1,9 @@
-package com.mycompany.app.Model;
+package com.mycompany.app;
 
 import org.junit.Test;
 
 import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Livro;
-import com.mycompany.app.Model.*;
 
 import static org.junit.Assert.*;
 
@@ -70,9 +69,11 @@ public class LivroTest {
     @Test
     public void testGetTitulo() {
         //Cria uma instancia de Livro
-        Autor autor = new Autor("Jess", "Brasileira");
-        Livro livro1 = new Livro("Java Basico", autor, "tecnologia", true);
+        Livro livro1 = new Livro();
 
+        //Atribui um titulo para o livro criado
+        livro1.setTitulo("Java Basico");
+        
         //Verifica se o titulo atribuído é igual ao retorno de getTitulo()
         assertEquals("Java Basico", livro1.getTitulo());
     }

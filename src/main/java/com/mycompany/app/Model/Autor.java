@@ -1,9 +1,11 @@
 package com.mycompany.app.Model;
 import java.util.ArrayList;
+import com.mycompany.app.Interface.EstrategiaPublicacao;
 
 public class Autor extends Pessoa{
 	private String nacionalidade;
 	private boolean isUsuario;
+	private EstrategiaPublicacao estrategia;
 
 	public Autor() {
 		super();
@@ -31,6 +33,10 @@ public class Autor extends Pessoa{
 	public void setIsUsuario(boolean isUsuario) {
 		this.isUsuario = isUsuario;
 	}
+
+	public void setEstrategiaPublicacao(EstrategiaPublicacao estrategia) {
+		this.estrategia = estrategia;
+	}
 	
 	public String getNacionalidade() {
 		return this.nacionalidade;
@@ -50,6 +56,10 @@ public class Autor extends Pessoa{
 	
 	public boolean getIsUsuario() {
 		return this.isUsuario;
+	}
+
+	public void publicar(Publicacao publicacao) {
+		this.estrategia.publicar(publicacao, this);
 	}
 	
 }

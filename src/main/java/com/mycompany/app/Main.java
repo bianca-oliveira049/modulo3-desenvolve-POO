@@ -13,7 +13,7 @@ public class Main {
 		users.add(user1);
 		users.add(user2);
 
-		Autor autor1 = new Autor("Jessica Felix", "Brasileira", obras, false);
+		Autor autor1 = new Autor("Jessica Felix", "Brasileira", obras, true);
 
 		Livro livro1 = new Livro("Java for Begginers", autor1, "Tecnologia", true);
 
@@ -22,6 +22,7 @@ public class Main {
 		user1.empresta(livro1, users);
 		user2.empresta(livro1, users);
 
-		Artigo artigo = new Artigo("Entendendo Compiladores", autor1, "tecnologia", true);
+		Artigo artigo = new Artigo();
+		autor1.publicar(artigo);
 	}
 }

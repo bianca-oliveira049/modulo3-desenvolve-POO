@@ -4,7 +4,6 @@ import org.junit.Test;
 import java.util.ArrayList;
 import com.mycompany.app.Model.Autor;
 import com.mycompany.app.Model.Livro;
-import com.mycompany.app.Model.Usuario;
 
 import static org.junit.Assert.*;
 
@@ -108,4 +107,5 @@ public class AutorTest {
         assertFalse(autor1.getIsUsuario());
         assertTrue(autor2.getIsUsuario());
     }
+
 }

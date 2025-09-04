@@ -3,7 +3,6 @@ package com.mycompany.app;
 import org.junit.Test;
 
 import com.mycompany.app.Model.Artigo;
-import com.mycompany.app.Model.Publicacao;
 
 import static org.junit.Assert.*;
 

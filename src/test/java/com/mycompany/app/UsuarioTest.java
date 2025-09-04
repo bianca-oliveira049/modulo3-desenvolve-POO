@@ -38,9 +38,6 @@ public class UsuarioTest {
         //Cria uma instancia de Usuario
         Usuario usuario = new Usuario();
 
-        //Cria um array de usuarios e adiciona o usuário criado
-        ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-
         //Cria um autor e livros
         Autor autor = new Autor("Jess", "Brasileira");
         Livro livro1 = new Livro("Java Basico", autor, "tecnologia", true);
@@ -51,6 +48,8 @@ public class UsuarioTest {
         Emprestimo emprestimo1 = new Emprestimo(dataAtual, dataAtual, livro1, usuario);
         Emprestimo emprestimo2 = new Emprestimo(dataAtual, dataAtual, livro2, usuario);
         ArrayList<Emprestimo> historico = new ArrayList<Emprestimo>();
+        historico.add(emprestimo1);
+        historico.add(emprestimo2);
 
         //Atribui o array ao usuario
         usuario.sethistoricoEmprestimo(historico);
@@ -78,9 +77,6 @@ public class UsuarioTest {
         //Cria uma instancia de Usuario
         Usuario usuario = new Usuario();
 
-        //Cria um array de usuarios e adiciona o usuário criado
-        ArrayList<Usuario> usuarios = new ArrayList<Usuario>();
-
         //Cria um autor e livros
         Autor autor = new Autor("Jess", "Brasileira");
         Livro livro1 = new Livro("Java Basico", autor, "tecnologia", true);
@@ -99,7 +95,7 @@ public class UsuarioTest {
         usuario.sethistoricoEmprestimo(historico);
 
         //Verifica se o array atribuido é igual ao retorno de getHistoricoEmprestimo()
-        assertArrayEquals(historico, usuario.getHistoricoEmprestimo());
+        assertEquals(historico, usuario.getHistoricoEmprestimo());
     }
 
     //Empresta
